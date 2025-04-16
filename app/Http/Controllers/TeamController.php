@@ -80,9 +80,9 @@ class TeamController extends Controller
             $file = $request['images'];
             $filename = 'SimonJonah-' . time() . '.' . $file->getClientOriginalExtension();
             $path = $request->file('images')->storeAs('resourceimages', $filename);
-
+            $edit_teams['images'] = $path;
         }
-        $edit_teams['images'] = $path;
+        
         $edit_teams->fname = $request->fname;
         $edit_teams->lname = $request->lname;
         $edit_teams->designation = $request->designation;
