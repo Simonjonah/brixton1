@@ -604,6 +604,13 @@
 									</div>
 								@endif
 								<div class="row clearfix">
+									<!-- Title Column -->
+								<div class="title-column col-lg-4 col-md-12 col-sm-12">
+									<div class="inner-column">
+										<h2>Request for <span> Call-back</span></h2>
+										<div class="text">If you want to discuss how to enrolment at BRIXTONN SCHOOLS, please schedule a meeting through this contact form.</div>
+									</div>
+								</div>
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
 										<label>Email Address</label>
 										<input class="form-control" type="text" name="email" placeholder="Your Email">
@@ -626,13 +633,7 @@
 
 					</div>
 				</div>
-				<!-- Title Column -->
-				<div class="title-column col-lg-4 col-md-12 col-sm-12">
-					<div class="inner-column">
-						<h2>Request for <span> Call-back</span></h2>
-						<div class="text">If you want to discuss how to enrolment at BRIXTONN SCHOOLS, please schedule a meeting through this contact form.</div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</section>
