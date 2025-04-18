@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+{{-- @extends('layouts.app') --}}
+@include('pages.common.header')
 
 <div class="container">
     <div class="row justify-content-center">
@@ -31,7 +31,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -45,10 +45,10 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="confirm_password" type="password" class="form-control"  name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                        Show Password <input type="checkbox" onclick="togglePassword()">
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -63,17 +63,9 @@
     </div>
 </div>
 
-<!-- jQuery -->
-<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+@include('pages.common.footer')
 
-</body>
-</html>
-
-<script>
+{{-- <script>
   function myFunction() {
   var x = document.getElementById("myInput");
   if (x.type === "password") {
@@ -82,4 +74,15 @@
     x.type = "password";
   }
 }
-</script>
+</script> --}}
+<script>
+    function togglePassword() {
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirm_password");
+
+      const type = password.type === "password" ? "text" : "password";
+
+      password.type = type;
+      confirmPassword.type = type;
+    }
+  </script>

@@ -1,4 +1,5 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@include('pages.common.header')
 
 @section('content')
 <div class="container">
@@ -45,15 +46,8 @@
     </div>
 </div>
 
-<!-- jQuery -->
-<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+@include('pages.common.footer')
 
-</body>
-</html>
 
 <script>
   function myFunction() {

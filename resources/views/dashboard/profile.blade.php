@@ -215,7 +215,7 @@
                       <div class="form-group row">
                         <label for="inputName2" value="{{ Auth::guard('web')->user()->fatheraddress }}" class="col-sm-2 col-form-label">Address</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" value="{{ Auth::guard('web')->user()->fatheraddress }}" name="fatheraddress" id="inputName2" placeholder="Address">
+                          <input type="text" required class="form-control" value="{{ Auth::guard('web')->user()->fatheraddress }}" name="fatheraddress" id="inputName2" placeholder="Address">
                         </div>
                       </div>
 
@@ -246,7 +246,7 @@
                       <div class="form-group row">
                         <label for="inputName2" value="{{ Auth::guard('web')->user()->images }}" class="col-sm-2 col-form-label">Picture</label>
                         <div class="col-sm-10">
-                          <input type="file" class="form-control" required name="images" id="inputName2" placeholder="profileimage">
+                          <input type="file" class="form-control" name="images" id="inputName2" placeholder="profileimage">
                         </div>
                       </div>
                      

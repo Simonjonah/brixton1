@@ -28,7 +28,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-earnings"></span>
+							{{-- <span class="icon flaticon-earnings"></span> --}}
 						</div>
 						<h6><a href="#">Future <br> Management</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -50,7 +50,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-target"></span>
+							{{-- <span class="icon flaticon-target"></span> --}}
 						</div>
 						<h6><a href="#">Reading and  <br> Spelling</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -61,7 +61,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-car"></span>
+							{{-- <span class="icon flaticon-car"></span> --}}
 						</div>
 						<h6><a href="#">Music <br> Classes</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -72,7 +72,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-analysis-1"></span>
+							{{-- <span class="icon flaticon-analysis-1"></span> --}}
 						</div>
 						<h6><a href="#">Art-Work</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -83,7 +83,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-house"></span>
+							{{-- <span class="icon flaticon-house"></span> --}}
 						</div>
 						<h6><a href="#">Creative  <br> Writing</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -94,7 +94,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-employee"></span>
+							{{-- <span class="icon flaticon-employee"></span> --}}
 						</div>
 						<h6><a href="#">Computer <br> Classes</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -105,7 +105,7 @@
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-heartbeat"></span>
+							{{-- <span class="icon flaticon-heartbeat"></span> --}}
 						</div>
 						<h6><a href="#">Skill <br> Development</a></h6>
 						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
@@ -114,14 +114,12 @@
 				
 				
 				
-				<!-- Services Block Fourteen -->
 				<div class="services-block-fourteen style-two col-lg-3 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
 						<div class="icon-box">
-							<span class="icon flaticon-heartbeat"></span>
+							{{-- <span class="icon flaticon-heartbeat"></span> --}}
 						</div>
 						<h6><a href="#">Home <br>  Management</a></h6>
-						{{-- <div class="text">The argument in favorite of using filler to text goes some thing like this top</div> --}}
 					</div>
 				</div>
 

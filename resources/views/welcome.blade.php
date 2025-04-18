@@ -460,7 +460,7 @@
 				<div class="team-block-two col-lg-4 col-md-6 col-sm-12">
 					<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="image">
-							<a href="{{ url('viewsinglemember/'.$view_team->ref_no) }}"><img style="height: 350px; width: 100%;" src="{{ URL::asset("/public/../$view_team->images")}}" alt="" title=""></a>
+							<a href="{{ url('viewsinglemember/'.$view_team->ref_no) }}"><img style="height: 500px; width: 100%;" src="{{ URL::asset("/public/../$view_team->images")}}" alt="" title=""></a>
 							<ul class="social-box">
 								<li><a href="{{ $view_team->facebook }}" class="fa fa-facebook"></a></li>
 								<li><a href="{{ $view_team->twitter }}" class="fa fa-twitter"></a></li>
@@ -584,6 +584,13 @@
 		<div class="auto-container">
 			<div class="row clearfix">
 				<!-- Form Column -->
+				<!-- Title Column -->
+				<div class="title-column col-lg-4 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<h2>Request for <span> Call-back</span></h2>
+						<div class="text">If you want to discuss how to enrolment at BRIXTONN SCHOOLS, please schedule a meeting through this contact form.</div>
+					</div>
+				</div>
 				<div class="form-column col-lg-8 col-md-12 col-sm-12">
 					<div class="inner-column">
 
@@ -604,13 +611,6 @@
 									</div>
 								@endif
 								<div class="row clearfix">
-									<!-- Title Column -->
-								<div class="title-column col-lg-4 col-md-12 col-sm-12">
-									<div class="inner-column">
-										<h2>Request for <span> Call-back</span></h2>
-										<div class="text">If you want to discuss how to enrolment at BRIXTONN SCHOOLS, please schedule a meeting through this contact form.</div>
-									</div>
-								</div>
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
 										<label>Email Address</label>
 										<input class="form-control" type="text" name="email" placeholder="Your Email">
@@ -633,7 +633,13 @@
 
 					</div>
 				</div>
-				
+				{{-- <!-- Title Column -->
+				<div class="title-column col-lg-4 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<h2>Request for <span> Call-back</span></h2>
+						<div class="text">If you want to discuss how to enrolment at BRIXTONN SCHOOLS, please schedule a meeting through this contact form.</div>
+					</div>
+				</div> --}}
 			</div>
 		</div>
 	</section>

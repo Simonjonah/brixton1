@@ -34,7 +34,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{ url('admin/teacherupdated/'.$edit_singteachers->ref_no) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ url('admin/teacherupdated/'.$edit_singteachers->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                @if (Session::get('success'))
                         <div class="alert alert-success">

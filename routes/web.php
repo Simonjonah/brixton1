@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\AcademicsessionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -330,7 +331,7 @@ Route::prefix('admin')->name('admin.')->group(function() {
         Route::get('teachersacked/{ref_no}', [UserController::class, 'teachersacked'])->name('teachersacked');
         Route::get('teachersuspend/{ref_no}', [UserController::class, 'teachersuspend'])->name('teachersuspend');
         Route::get('teacherapprove/{ref_no}', [UserController::class, 'teacherapprove'])->name('teacherapprove');
-        Route::put('teacherupdated/{ref_no}', [UserController::class, 'teacherupdated'])->name('teacherupdated');
+        Route::put('teacherupdated/{id}', [UserController::class, 'teacherupdated'])->name('teacherupdated');
         Route::get('editteacher/{ref_no}', [UserController::class, 'editteacher'])->name('editteacher');
         Route::get('viewsingleteacher/{ref_no}', [UserController::class, 'viewsingleteacher'])->name('viewsingleteacher');
         Route::get('viewteachers', [UserController::class, 'viewteachers'])->name('viewteachers');
@@ -724,14 +725,21 @@ Route::prefix('web')->name('web.')->group(function() {
 });
 
 
+
+
+Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])->name('password.request');
+Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])->name('password.email');
+Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])->name('password.reset');
+Route::post('reset-password', [NewPasswordController::class, 'store'])->name('password.update');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
-Route::get('password/reset', [UserController::class, 'showLinkRequestForm'])->name('password.request');
-Route::post('password/email', [UserController::class, 'sendResetLinkEmail'])->name('password.email');
-Route::get('password/reset/{token}', [UserController::class, 'showResetForm'])->name('password.reset');
-Route::post('password/reset', [UserController::class, 'resetPassword'])->name('password.update');
+// Route::get('password/reset', [UserController::class, 'showLinkRequestForm'])->name('password.request');
+// Route::post('password/email', [UserController::class, 'sendResetLinkEmail'])->name('password.email');
+// Route::get('password/reset/{token}', [UserController::class, 'showResetForm'])->name('password.reset');
+// Route::post('password/reset', [UserController::class, 'resetPassword'])->name('password.update');
 
 Route::get('/registerteacher', [UserController::class, 'registerteacher'])->name('registerteacher');
 

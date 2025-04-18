@@ -976,23 +976,23 @@ class UserController extends Controller
     }
     
 
-    public function teacherupdated(Request $request, $ref_no){
-        $edit_singteachers = User::where('ref_no', $ref_no)->first();
-       
+    public function teacherupdated(Request $request, $id){
+        $edit_singteachers = User::find($id);
+    //    dd($edit_singteachers);
         $request->validate([
             'fname' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string'],
-            // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            //'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'string'],
             'middlename' => ['required', 'string'],
             'centername' => ['required', 'string'],
             'classname' => ['required', 'string'],
             'gender' => ['required', 'string'],
-            'fatheraddress' => ['required', 'string'],
+            'fatheraddress' => ['nullable', 'string'],
             'section' => ['required', 'string'],
             'entrylevel' => ['required', 'string'],
             
-            'images' => 'required|mimes:jpg,png,jpeg'
+            'images' => 'nullable|mimes:jpg,png,jpeg'
         ]);
 
         if ($request->hasFile('images')) {
@@ -1322,6 +1322,7 @@ class UserController extends Controller
     
     public function updatebiodata(Request $request, $ref_no){
         $edit_bio = User::where('ref_no', $ref_no)->first();
+        // dd($edit_bio);
         $request->validate([
             'fname' => ['required', 'string', 'max:255'],
             'section' => ['required', 'string', 'max:255'],
@@ -1332,7 +1333,7 @@ class UserController extends Controller
             'entrylevel' => ['required', 'string', 'max:255'],
             'classname' => ['required', 'string', 'max:255'],
             'centername' => ['required', 'string', 'max:255'],
-            'images' => 'required|mimes:jpg,png,jpeg,jfif',
+            'images' => 'nullable|mimes:jpg,png,jpeg,jfif',
         ]);
         // dd($request->all());
         if ($request->hasFile('images')) {
@@ -1388,7 +1389,7 @@ class UserController extends Controller
             'motheremployer' => ['required', 'string'],
             'motheremail' => ['nullable', 'string'],
             'motheraddress' => ['required', 'string'],
-            'password' => ['required', 'string'],
+            // 'password' => ['required', 'string'],
 
             
         ]);
@@ -1417,7 +1418,7 @@ class UserController extends Controller
         $add_parent->centername = $request->centername;
         $add_parent->section = $request->section;
         $add_parent->assign = 'parent';
-        $add_parent->password = \Hash::make($request->password);
+        $add_parent->password = \Hash::make($request->phone);
         
         $add_parent->ref_no = substr(rand(0,time()),0, 9);
 

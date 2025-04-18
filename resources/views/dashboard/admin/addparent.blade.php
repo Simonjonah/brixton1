@@ -69,14 +69,14 @@
 									<input class="form-control" type="text" name="title" value="" placeholder="Title" required="">
 								</div>
 								<div class="form-group">
-									<h5>Phone</h5>
-                                    <input type="text" class="form-control" @error('phone')
-                                    @enderror value="{{ old('phone') }}" name="phone" placeholder="phone">
-                                </div>
-                           
-                                @error('phone')
-                                <span class="text-danger">{{ $message }}</span>
-                                @enderror 
+									<h5>Phone (This Phone Number is the login Password to the parent)</h5>
+                      <input type="text" class="form-control" @error('phone')
+                      @enderror value="{{ old('phone') }}" name="phone" placeholder="phone">
+                  </div>
+              
+                  @error('phone')
+                  <span class="text-danger">{{ $message }}</span>
+                  @enderror 
                    
                                 <div class="form-group">
 									<h5>Nationality</h5>
@@ -88,7 +88,7 @@
 								</div>
 
                                 <div class="form-group">
-									<h5>Email</h5>
+									<h5>Email (This Email is the login email to the parent)</h5>
 									<input type="text" class="form-control" @error('email')
                                     @enderror value="{{ old('email') }}" name="email" placeholder="Email">
                                 </div>
@@ -148,7 +148,7 @@
                             <input class="form-control" type="text" name="mothertitle" value="" placeholder="Title" required="">
                         </div>
                         <div class="form-group">
-                            <h5>Phone</h5>
+                            <h5>Phone </h5>
                             <input class="form-control" type="text" name="motherphone" value="" placeholder="Phone Number" required="">
                         </div>
                         <div class="form-group">
@@ -169,7 +169,7 @@
                             <input class="form-control" type="text" name="motheraddress" value="" placeholder="Address" required="">
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <h5>Use Parent Phone Number as Password</h5>
                             <input type="number" class="form-control" @error('password')
                             @enderror value="{{ old('password') }}" name="password" placeholder="Use Parent Phone Number as Password">
@@ -177,7 +177,7 @@
                         
                         @error('password')
                         <span class="text-danger">{{ $message }}</span>
-                        @enderror 
+                        @enderror  --}}
                 
 							<div class="form-group">
 								<button type="submit" class="btn btn-success">Submit</button>
